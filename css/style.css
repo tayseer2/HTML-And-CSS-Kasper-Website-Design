@@ -1,3 +1,4 @@
+
 /* Start Variables */
 :root {
   --main-color: #19c8fa;
@@ -86,6 +87,7 @@ ul {
   margin: 0 auto 100px;
   line-height: 2;
   color: var(--para-color);
+  max-width: 100%;
 }
 /* End Components */
 /* Start Header */
@@ -195,7 +197,7 @@ header nav .form i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 60%);
+  background-color: rgb(0 0 0 / 30%);
 }
 .landing .text {
   position: absolute;
@@ -266,7 +268,7 @@ header nav .form i {
   border-color: var(--main-color);
 }
 /* End Landing */
-/* Start services */
+/* Start Services */
 .services {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -275,8 +277,8 @@ header nav .form i {
   .services .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    column-gap: 40px;
-    row-gap: 60px;
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
   }
 }
 .services .srv-box {
@@ -296,15 +298,15 @@ header nav .form i {
     margin: 0 0 30px;
   }
 }
-.services .srv-box .text h3 {
+.services .srv-box h3 {
   margin-bottom: 30px;
   color: var(--main-color);
 }
 .services .srv-box p {
   line-height: 2;
-  color: var(--para-color);
+  color: #777;
 }
-/* End services */
+/* End Services */
 /* Start Design */
 .design {
   padding-top: var(--section-padding);
@@ -324,7 +326,7 @@ header nav .form i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 60%);
+  background-color: rgb(0 0 0 / 20%);
 }
 .design .image,
 .design .text {
@@ -344,7 +346,6 @@ header nav .form i {
   position: relative;
   bottom: -150px;
 }
-
 .design .text {
   color: white;
   padding: 50px;
@@ -367,52 +368,52 @@ header nav .form i {
   top: 1px;
 }
 /* End Design */
-/* Start Protfolio */
-.protfolio {
+/* Start Portfolio */
+.portfolio {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
-.protfolio .shuffle {
+.portfolio .shuffle {
   display: flex;
   justify-content: center;
 }
-.protfolio .shuffle li {
+.portfolio .shuffle li {
   padding: 10px;
 }
-.protfolio .shuffle li.active {
+.portfolio .shuffle li.active {
   background-color: var(--main-color);
   color: white;
 }
-.protfolio .imags-container {
+.portfolio .imgs-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 60px;
 }
-.protfolio .imags-container .box {
+.portfolio .imgs-container .box {
   overflow: hidden;
   position: relative;
 }
-.protfolio .imags-container .box:hover .caption {
+.portfolio .imgs-container .box:hover .caption {
   bottom: 0;
 }
-.protfolio .imags-container .box:hover img {
+.portfolio .imgs-container .box:hover img {
   transform: rotate(3deg) scale(1.1);
 }
-@media screen and (min-width: 768px) {
-  .protfolio .imags-container .box {
+@media (min-width: 768px) {
+  .portfolio .imgs-container .box {
     flex-basis: 50%;
   }
 }
-@media screen and (min-width: 1199px) {
-  .protfolio .imags-container .box {
+@media (min-width: 1199px) {
+  .portfolio .imgs-container .box {
     flex-basis: 25%;
   }
 }
-.protfolio .imags-container .box img {
+.portfolio .imgs-container .box img {
   max-width: 100%;
   transition: 0.3s;
 }
-.protfolio .imags-container .box .caption {
+.portfolio .imgs-container .box .caption {
   position: absolute;
   left: 0;
   padding: 20px;
@@ -421,30 +422,29 @@ header nav .form i {
   transition: 0.3s;
   bottom: -100%;
 }
-.protfolio .imags-container .box .caption h4 {
-  font-weight: bold;
+.portfolio .imgs-container .box .caption h4 {
+  font-weight: normal;
   margin-bottom: 10px;
 }
-.protfolio .imags-container .box .caption p {
+.portfolio .imgs-container .box .caption p {
   color: var(--main-color);
 }
-.protfolio .more {
+.portfolio .more {
   background-color: var(--main-color);
   color: white;
-  display: block;
   padding: 15px 20px;
-  margin: 30px auto;
+  display: block;
   width: fit-content;
+  margin: 30px auto;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.5s;
 }
-.protfolio .more:hover {
+.portfolio .more:hover {
   box-shadow: 0px 0px 5px var(--main-color), 0px 0px 30px var(--main-color),
     0px 0px 90px var(--main-color);
 }
-/* End Protfolio */
-/* Start Video Section */
+/* End Portfolio */
+/* Start Video */
 .video {
   position: relative;
 }
@@ -455,7 +455,7 @@ header nav .form i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 45%);
+  background-color: rgb(0 0 0 / 40%);
 }
 .video video {
   width: 100%;
@@ -471,20 +471,21 @@ header nav .form i {
   text-align: center;
 }
 .video .text h2 {
-  font-weight: normal;
   margin: 0 0 30px;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 .video .text p {
   margin-bottom: 30px;
 }
 .video .text button {
   background-color: black;
-  border: none;
-  padding: 10px 20px;
   color: white;
+  padding: 10px 20px;
+  border: none;
   text-transform: uppercase;
 }
-/* End Video Section */
+/* End Video */
 /* Start About */
 .about {
   padding-top: var(--section-padding);
@@ -493,18 +494,18 @@ header nav .form i {
 }
 .about img {
   position: relative;
-  bottom: -90px;
-  margin: -90px;
+  bottom: -150px;
+  margin-top: -150px;
   max-width: 100%;
 }
 @media (max-width: 767px) {
   .about img {
-    bottom: -30px;
-    margin: -30px;
+    bottom: -60px;
+    margin-top: -60px;
   }
 }
 /* End About */
-/* Start Statistics */
+/* Start Stats */
 .stats {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -512,17 +513,16 @@ header nav .form i {
   background-image: url("../images/natalie-chaney-zhUzdTgtRP8-unsplash.jpg");
   background-size: cover;
   position: relative;
+  text-align: center;
 }
 .stats::before {
-  .video::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 60%);
-  }
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 20%);
 }
 .stats .container {
   position: relative;
@@ -533,7 +533,6 @@ header nav .form i {
   color: white;
   padding: 50px;
   background-color: var(--transparent-color);
-  text-align: center;
 }
 @media (max-width: 767px) {
   .stats .container .box {
@@ -551,24 +550,24 @@ header nav .form i {
   }
 }
 .stats .container .box i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  border-radius: 50%;
   width: 40px;
   height: 40px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
   margin: 0 auto 30px;
 }
 .stats .container .box .number {
-  font-weight: bold;
   font-size: 50px;
+  font-weight: bold;
   margin: 0 0 20px;
 }
 .stats .container .box p {
   font-size: 14px;
 }
-/* End Statistics */
+/* End Stats */
 /* Start Skills */
 .our-skills {
   padding-top: var(--section-padding);
@@ -585,10 +584,10 @@ header nav .form i {
   }
 }
 .our-skills .container > div > h3 {
-  font-weight: normal;
-  text-transform: uppercase;
   margin: 0 0 30px;
+  font-weight: normal;
   text-align: center;
+  text-transform: uppercase;
 }
 .our-skills .container > div > p {
   color: var(--para-color);
@@ -596,22 +595,22 @@ header nav .form i {
   text-align: center;
   margin-bottom: 60px;
 }
-.our-skills .container .contant {
+.our-skills .testimonials .content {
   display: flex;
-  margin-bottom: 30px;
   align-items: center;
+  margin-bottom: 30px;
 }
-.our-skills .container .contant img {
+.our-skills .testimonials .content img {
   width: 100px;
   border-radius: 50%;
   margin-right: 50px;
 }
 @media (max-width: 767px) {
-  .our-skills .container .contant {
+  .our-skills .testimonials .content {
     flex-direction: column;
     text-align: center;
   }
-  .our-skills .container .contant img {
+  .our-skills .testimonials .content img {
     margin: 0 auto 20px;
   }
 }
@@ -628,7 +627,8 @@ header nav .form i {
 .our-skills .testimonials .bullets {
   display: flex;
   justify-content: center;
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .our-skills .testimonials .bullets li {
   width: 14px;
@@ -678,7 +678,7 @@ header nav .form i {
   border-width: 8px;
   border-color: black transparent transparent;
   right: -8px;
-  top: -14px;
+  top: -15px;
 }
 /* End Skills */
 /* Start Quote */
@@ -692,17 +692,18 @@ header nav .form i {
   color: white;
 }
 .quote::before {
-  .video::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 60%);
-  }
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 20%);
 }
-.quote .container q {
+.quote .container {
+  position: relative;
+}
+.quote q {
   font-size: 30px;
   margin-bottom: 20px;
   display: block;
@@ -713,54 +714,51 @@ header nav .form i {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
-.pricing .contant {
+.pricing .plans {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
 }
-.pricing .contant .box {
+.pricing .plans .plan {
   background-color: #fcfcfc;
   text-align: center;
 }
-.pricing .contant .box .head {
+.pricing .plans .plan .head {
   padding: 40px 20px;
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
-.pricing .contant .box .head h3 {
+.pricing .plans .plan .head h3 {
   font-weight: normal;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.pricing .contant .box .head .pric-num {
-  font-weight: bold;
+.pricing .plans .plan .head span {
   font-size: 60px;
   font-weight: bold;
 }
-.pricing .contant .box .head .pric-num::before {
+.pricing .plans .plan .head span::before {
   content: "$";
-  position: relative;
   font-size: 25px;
-  bottom: 40px;
+  position: relative;
+  top: -40px;
   margin-right: 15px;
   font-weight: normal;
 }
-.pricing .contant .box .head .pric-num::after {
-  content: "/MO";
+.pricing .plans .plan .head span::after {
+  content: "/Mo";
+  font-size: 20px;
   position: relative;
-  font-size: 25px;
-  margin-left: 15px;
-  font-weight: normal;
+  right: -15px;
 }
-.pricing .contant .box ul {
-  border-top: 1px solid var(--main-color);
+.pricing .plans .plan ul {
   border-bottom: 1px solid var(--main-color);
 }
-.pricing .contant .box ul li {
+.pricing .plans .plan ul li {
   padding: 20px;
   position: relative;
 }
-.pricing .contant .box ul li:not(:last-child)::after {
+.pricing .plans .plan ul li:not(:last-child)::after {
   content: "";
   width: 140px;
   height: 1px;
@@ -770,29 +768,28 @@ header nav .form i {
   transform: translateX(-50%);
   bottom: 0;
 }
-.pricing .contant .box .foot a {
+.pricing .plans .plan .foot a {
   display: block;
-  padding: 20px;
-  border: 1px solid var(--main-color);
-  color: black;
+  padding: 20px 20px;
   text-decoration: none;
+  border: 1px solid var(--main-color);
   width: fit-content;
-  margin: 20px auto;
+  margin: 30px auto;
+  color: black;
 }
 .pricing .contact-text {
   text-align: center;
-  margin: 40px auto 20px;
+  margin: 50px auto 20px;
   font-size: 20px;
 }
-.pricing .contact-link a {
+.pricing .contact-link a{
   display: block;
-  padding: 15px 30px;
-  background-color: var(--main-color);
-  color: white;
-  text-decoration: none;
   width: fit-content;
   margin: 20px auto;
-  transition: 0.5s;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
 }
 .pricing .contact-link a:hover {
   box-shadow: 0px 0px 5px var(--main-color), 0px 0px 30px var(--main-color),
@@ -809,25 +806,22 @@ header nav .form i {
   color: white;
 }
 .subscribe::before {
-  .video::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 60%);
-  }
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 20%);
 }
 .subscribe .container {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
 }
 @media (max-width: 991px) {
   .subscribe .container {
     flex-direction: column;
-    text-align: center;
   }
 }
 .subscribe form {
@@ -839,14 +833,14 @@ header nav .form i {
 .subscribe form i {
   position: absolute;
   top: 50%;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   left: 25px;
 }
 .subscribe form input[type="email"] {
   border: 1px solid white;
   border-right: none;
-  padding: 20px 20px 20px 60px;
   background: none;
+  padding: 20px 20px 20px 60px;
   caret-color: var(--main-color);
   width: calc(100% - 130px);
   color: white;
@@ -855,9 +849,9 @@ header nav .form i {
   width: 130px;
   background-color: var(--main-color);
   color: white;
+  padding: 10px 20px;
   border: 1px solid white;
   border-left: none;
-  padding: 10px 20px;
   text-transform: uppercase;
 }
 .subscribe form input[type="email"]:focus,
@@ -874,6 +868,7 @@ header nav .form i {
 @media (max-width: 991px) {
   .subscribe p {
     margin: 30px 0 0;
+    text-align: center;
   }
 }
 /* End Subscribe */
@@ -908,22 +903,15 @@ header nav .form i {
   height: 200px;
 }
 .contact .contant form input[type="submit"] {
-  display: block;
-  padding: 20px 30px;
   background-color: var(--main-color);
   color: white;
-  width: fit-content;
+  padding: 20px;
+  border: none;
   display: flex;
   margin-left: auto;
-  transition: 0.5s;
-  border: none;
-  cursor: pointer;
   text-transform: uppercase;
-}
-@media (max-width: 767px) {
-  .contact .contant form input[type="submit"] {
-    margin: 0 auto;
-  }
+  cursor: pointer;
+  transition: 0.5s;
 }
 .contact .contant form input[type="submit"]:hover {
   box-shadow: 0px 0px 5px var(--main-color), 0px 0px 30px var(--main-color),
@@ -946,7 +934,7 @@ header nav .form i {
 }
 .contact .contant .info .phone {
   display: block;
-  color: var(--para-color);
+  color: #777;
   margin-bottom: 10px;
 }
 .contact .contant .info h4:nth-of-type(2) {
@@ -958,7 +946,7 @@ header nav .form i {
   }
 }
 .contact .contant .info address {
-  color: var(--para-color);
+  color: #777;
   line-height: 2;
 }
 @media (max-width: 767px) {
@@ -978,15 +966,13 @@ header nav .form i {
   text-align: center;
 }
 .footer::before {
-  .video::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0 0 0 / 60%);
-  }
+    background-color: rgb(0 0 0 / 20%);
 }
 .footer .container {
   position: relative;
@@ -1013,3 +999,4 @@ header nav .form i {
   color: var(--main-color);
 }
 /* End Footer */
+
